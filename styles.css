@@ -247,7 +247,6 @@ h3 {
 .app-card {
   position: relative;
   max-width: 980px;
-  min-height: 620px;
   margin-inline: auto;
   padding: clamp(26px, 7vw, 58px);
   overflow: hidden;
@@ -272,8 +271,8 @@ h3 {
 
 .card-copy h2 {
   max-width: 14ch;
-  font-size: clamp(2rem, 9vw, 4.3rem);
-  line-height: 1.18;
+  font-size: clamp(1.75rem, 8vw, 3.2rem);
+  line-height: 1.24;
 }
 
 .card-copy p:last-child {
@@ -283,14 +282,14 @@ h3 {
 }
 
 .app-card img {
-  position: absolute;
-  right: clamp(-74px, -7vw, -24px);
-  bottom: -68px;
-  width: min(58vw, 400px);
+  position: relative;
+  z-index: 1;
+  width: min(100%, 300px);
   height: auto;
+  margin: 26px auto -14px;
   border-radius: 28px;
   box-shadow: 0 22px 46px rgba(36, 59, 40, 0.2);
-  transform: rotate(5deg);
+  transform: rotate(2deg);
 }
 
 .feature-grid {
@@ -387,6 +386,20 @@ footer a {
     width: min(31vw, 330px);
   }
 
+  .app-card {
+    min-height: 660px;
+    padding-right: min(44vw, 460px);
+  }
+
+  .app-card img {
+    position: absolute;
+    right: clamp(20px, 5vw, 70px);
+    bottom: -54px;
+    width: min(32vw, 330px);
+    margin: 0;
+    transform: rotate(4deg);
+  }
+
   .feature-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -420,15 +433,7 @@ footer a {
   }
 
   .app-card {
-    min-height: 700px;
-    padding-bottom: 330px;
     border-radius: 22px;
-  }
-
-  .app-card img {
-    right: -54px;
-    bottom: -42px;
-    width: 300px;
   }
 
   footer {
